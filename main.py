@@ -2,15 +2,13 @@
 Головний модуль для запуску домашнього завдання GoIT Python Web HW-01
 """
 
-import logging
 import sys
 from typing import NoReturn
 
-# Налаштування логування
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
+from logger import get_logger
+
+# Отримуємо логер для цього модуля
+logger = get_logger(__name__)
 
 
 def run_task1() -> None:

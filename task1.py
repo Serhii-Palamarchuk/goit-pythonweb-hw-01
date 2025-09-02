@@ -3,15 +3,12 @@
 Реалізація системи створення транспортних засобів з регіональними специфікаціями
 """
 
-import logging
 from abc import ABC, abstractmethod
-from typing import Protocol
 
-# Налаштування логування
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
+from logger import get_logger
+
+# Отримуємо логер для цього модуля
+logger = get_logger(__name__)
 
 
 class Vehicle(ABC):

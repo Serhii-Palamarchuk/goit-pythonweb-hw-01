@@ -3,15 +3,13 @@
 Реалізація системи керування бібліотекою книг з дотриманням SOLID принципів
 """
 
-import logging
 from abc import ABC, abstractmethod
 from typing import List
 
-# Налаштування логування
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
+from logger import get_logger
+
+# Отримуємо логер для цього модуля
+logger = get_logger(__name__)
 
 
 class Book:

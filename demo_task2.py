@@ -2,14 +2,11 @@
 Приклад автоматичного тестування другого завдання
 """
 
-import logging
 from task2 import Library, LibraryManager
+from logger import get_logger
 
-# Налаштування логування для тестів
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
+# Отримуємо логер для цього модуля
+logger = get_logger(__name__)
 
 
 def test_task2_demo() -> None:
